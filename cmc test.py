@@ -1,3 +1,4 @@
+#made by @slay_the_normies
 import urllib3
 from bs4 import BeautifulSoup
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
