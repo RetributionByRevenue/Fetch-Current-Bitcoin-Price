@@ -6,7 +6,7 @@ Claim:
 ![Output Result](https://github.com/RetributionByRevenue/CoinMarketCap-Webscape-Fix-/blob/master/claim.jpg?raw=true?)
 
 Proof:
-![Output Result](https://github.com/RetributionByRevenue/CoinMarketCap-Webscape-Fix-/blob/master/proof.jpg?raw=true?)
+![Output Result](https://github.com/RetributionByRevenue/CoinMarketCap-Webscape-Fix-/blob/master/proof.gif?raw=true?)
 
 Output:
-![Output Result](https://github.com/RetributionByRevenue/CoinMarketCap-Webscape-Fix-/blob/master/output.jpg?raw=true?)
+![Output Result](https://github.com/RetributionByRevenue/CoinMarketCap-Webscape-Fix-/blob/master/output.JPG?raw=true?)
