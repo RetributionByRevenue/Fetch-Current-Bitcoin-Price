@@ -32,26 +32,29 @@ if 409736>len(soup):
 else:
     print('big')
     btc=soup[soup.find('Bitcoin'):]
-    btc=btc[btc.find('Bitcoin'):-300000]
-    btc_prices=btc
-    btc_prices=btc_prices[btc_prices.find('markets">$'):]
-    btc_prices=btc_prices[10:btc_prices.find('<')]
-    btc_prices=btc_prices.replace(',','')
-    btc=btc[btc.find('sort-by__percent-change-24-h"><div')+34:]
-    btc=btc[:btc.find('</div>')-1]
-    btc=btc[btc.find('">')+2:]
-    btc_24h=float(btc)
+    btc=btc[btc.find('Bitcoin'):btc.find('Bitcoin')+1300]
+    btc_price=btc[btc.find('$')+50:]
+    btc_price=btc_price[btc_price.find('$')+1:]
+    btc_price=btc_price.replace('/',' ')
+    btc_price=btc_price.replace('>',' ')
+    btc_price=btc_price[:btc_price.find('a')]
+    btc_prices=(btc_price.replace(',',''))
+    btc_prices=float(btc_prices.replace('<',''))
+    btc_24h=btc
+    btc_24h=btc_24h[btc_24h.find('%')-17:btc_24h.find('%')]
+    btc_24h=float(btc_24h[btc_24h.find(">")+1:])
     eth=soup[soup.find('Ethereum'):]
-    eth=eth[eth.find('Ethereum'):-300000]
-    eth_prices=eth
-    eth_prices=eth_prices[eth_prices.find('markets">$'):]
-    eth_prices=eth_prices[10:eth_prices.find('<')]
-    eth_prices=eth_prices.replace(',','')
-    eth_prices=float(eth_prices)
-    eth=eth[eth.find('sort-by__percent-change-24-h"><div')+34:]
-    eth=eth[:eth.find('</div>')-1]
-    eth=eth[eth.find('">')+2:]
-    eth_24h=float(eth)
+    eth=eth[eth.find('Ethereum'):eth.find('Ethereum')+1300]
+    eth_price=eth[eth.find('$')+50:]
+    eth_price=eth_price[eth_price.find('$')+1:]
+    eth_price=eth_price.replace('/',' ')
+    eth_price=eth_price.replace('>',' ')
+    eth_price=eth_price[:eth_price.find('a')]
+    eth_prices=(eth_price.replace(',',''))
+    eth_prices=float(eth_prices.replace('<',''))
+    eth_24h=eth
+    eth_24h=eth_24h[eth_24h.find('%')-17:eth_24h.find('%')]
+    eth_24h=float(eth_24h[eth_24h.find(">")+1:])
     print(btc_prices, 'bitcoin price')
     print(eth_prices, 'ethereum price')
     print(btc_24h, '24h btc change')
