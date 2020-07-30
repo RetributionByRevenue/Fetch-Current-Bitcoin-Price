@@ -1,4 +1,5 @@
 #made by @slay_the_normies
+#this code is now depericated (no longer working)(reffer to lines 64-74)
 import urllib3
 from bs4 import BeautifulSoup
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
