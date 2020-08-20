@@ -1,14 +1,1 @@
-# CoinMarketCap-Webscape-Fix-
-Soy devs @coinmarketcap have are trying to break webscraping (only 5% possible website is broken) but i have a fix.
-
-Claim:
-
-![Output Result](https://github.com/RetributionByRevenue/CoinMarketCap-Webscape-Fix-/blob/master/claim.JPG?raw=true?)
-
-Proof:
-
-![Output Result](https://github.com/RetributionByRevenue/CoinMarketCap-Webscape-Fix-/blob/master/proof.gif?raw=true?)
-
-Output:
-
-![Output Result](https://github.com/RetributionByRevenue/CoinMarketCap-Webscape-Fix-/blob/master/output.JPG?raw=true?)
+10 line python code snippet to fetch the current price of bitcoin (or any other crypto)
