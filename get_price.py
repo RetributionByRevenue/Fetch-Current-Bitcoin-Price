@@ -8,7 +8,7 @@ eth_string=str(eth_string)
 eth_string=eth_string[eth_string.find('{"@type":"Offer","price":"'):eth_string.find('","priceCurrency":"USD"}}')]
 eth_string=float(eth_string[26:])
 print(eth_string)
-
+#made by @slay_the_normies
 '''
 #made by @slay_the_normies
 #this code is now depericated (no longer working)(reffer to code snippet above)
