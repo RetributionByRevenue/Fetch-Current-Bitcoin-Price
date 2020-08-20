@@ -1,5 +1,17 @@
+import urllib3
+from bs4 import BeautifulSoup
+urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
+http = urllib3.PoolManager()
+response = http.request('GET', 'https://www.coingecko.com/en/coins/ethereum')
+eth_string = BeautifulSoup(response.data,features="lxml")  # Note the use of the .data property
+eth_string=str(eth_string)
+eth_string=eth_string[eth_string.find('{"@type":"Offer","price":"'):eth_string.find('","priceCurrency":"USD"}}')]
+eth_string=float(eth_string[26:])
+print(eth_string)
+
+'''
 #made by @slay_the_normies
-#this code is now depericated (no longer working)(reffer to lines 64-74)
+#this code is now depericated (no longer working)(reffer to code snippet above)
 import urllib3
 from bs4 import BeautifulSoup
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
@@ -60,15 +72,4 @@ else:
     print(eth_prices, 'ethereum price')
     print(btc_24h, '24h btc change')
     print(eth_24h, '24h eth change')
-'''
-import urllib3
-from bs4 import BeautifulSoup
-urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
-http = urllib3.PoolManager()
-response = http.request('GET', 'https://www.coingecko.com/en/coins/ethereum')
-eth_string = BeautifulSoup(response.data,features="lxml")  # Note the use of the .data property
-eth_string=str(eth_string)
-eth_string=eth_string[eth_string.find('{"@type":"Offer","price":"'):eth_string.find('","priceCurrency":"USD"}}')]
-eth_string=float(eth_string[26:])
-print(eth_string)
 '''
